@@ -1,2 +1,1 @@
-begin
-=====
+An all-purpose library, to be used for mathmatics. It is currently in very early development.
