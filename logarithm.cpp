@@ -1,21 +1,21 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
-class Logaritma{
+class Logarithm{
 public:
-
-double lo;
-Logaritma(){lo=0;}
-Logaritma(double l){lo=l;}
-double GetLogFunc(){ return log(lo); }
-
+double Lo;
+Logarithm(){Lo=0;}
+Logarithm(double L){Lo=L;}
+double GetLogFunc(){ return log(Lo); }
 };
+
 main()
 {
+    while(1){
     double a;
-    Logaritma value(a);
     cout<<"Please enter a value : ";
     cin>>a;
+    Logarithm value(a);
     cout<<"Result : "<<value.GetLogFunc()<<endl;
-return 0;
+}return 0;
 }
