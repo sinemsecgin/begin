@@ -7,8 +7,8 @@ double Lo;
 Logarithm(){Lo=0;}
 Logarithm(double L){Lo=L;}
 double GetLogFunc(){ return log(Lo); }
+double GetLoFunc(){return log10(Lo);}
 };
-
 class SquareRoot{
 public : double sqrtt;
 SquareRoot(){sqrtt=0;}
@@ -33,7 +33,8 @@ int main()
     cout<<"Please enter a value : ";
     cin>>a;
     Logarithm value(a);
-    cout<<"Result : "<<value.GetLogFunc()<<endl;
+    cout<<"Log function result : "<<value.GetLogFunc()<<endl;
+    cout<< "Log10 function result : "<<value.GetLoFunc()<<endl;
   if(a==0)
   break;
   }
