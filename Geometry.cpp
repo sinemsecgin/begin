@@ -41,3 +41,22 @@ double Cylinder::Area(){
 double Cylinder::Volume(){
     return (PI * diameter * diameter * height);
 }
+Circle::Circle(double circleEdge,alpha):
+circleEdge(circleEdge),alpha(alpha):{}
+
+double Circle:: GetArea(){
+                                return (PI*circleEdge*circleEdge);
+                                }
+
+double Circle::GetPerimeter(){ 
+                                return (2*PI*circleEdge);
+                                }
+
+double Circle::GetCircleSliceArea(){
+                                return (PI*pow(circleEdge,2)*alpha/360);
+                                }
+
+double Circle::GetArcsOfLength(){
+                                return (2*PI*circleEdge*alpha/360);
+                                }
+
