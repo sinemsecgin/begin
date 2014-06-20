@@ -41,23 +41,30 @@ int main()
 
     cout << "\n\n";
 
-    RegularPolygon triangle(6, 6);
-    RegularPolygon rectangle(6, 6);
-    RegularPolygon pentragon(6, 6);
+    RegularPolygon triangle(6, 3);
+    RegularPolygon rectangle(6, 4);
+    RegularPolygon pentagon(6, 5);
     RegularPolygon hexagon(6, 6);
-    Trapezoid trape(6,6,5);
+    Trapezoid trape(6, 6, 5);
     Sphere sp(6);
-    Parallelogram pa(6,9);
-    Cylinder cy(6,5);
+    Parallelogram pa(6, 9);
+    Cylinder cy(6, 5);
+    Circle circle(6);
+
     cout << "Area of geometric shapes :\n"
          << "Triangle: " << triangle.Area() << endl
          << "Rectangle: " << rectangle.Area() << endl
-         << "Pentagon: " << pentragon.Area() << endl
+         << "Pentagon: " << pentagon.Area() << endl
          << "Hexagon: " << hexagon.Area() << endl
-         <<"Trapezoid: "<<trape.Area()<<endl
-         <<"Sphere : "<<sp.Area()<<endl
-         <<"Parallelogram : "<<pa.Area()<<endl
-         <<"Cylindir Surface Area: "<<cy.Area()<<endl
-         <<"Cylindir Volume : "<<cy.Volume()<<endl;
+         << "Trapezoid: " << trape.Area() << endl
+         << "Sphere: " << sp.Area() << endl
+         << "Parallelogram: " << pa.Area() << endl
+         << "________________" << endl
+         << "Cylindir Surface Area: " << cy.Area() << endl
+         << "Cylindir Volume: " << cy.Volume() << endl
+         << "Circle Area: " << circle.Area() << endl
+         << "Circle Perimeter: " << circle.Perimeter() << endl
+         << "Area of 90 degree slice of the circle: " << circle.SliceArea(90) << endl
+         << "Perimeter of 90 degree slice of the circle: " << circle.SlicePerimeter(90) << endl;
     return 0;
 }

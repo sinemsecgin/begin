@@ -17,14 +17,14 @@ public:
     double Area();
 };
 
-class Sphere {
+class Sphere{
 public:
     double diameter;
     Sphere(double diameter=0);
     double Area();
 };
 
-class Parallelogram {
+class Parallelogram{
 public:
     double edge;
     double height;
@@ -32,12 +32,23 @@ public:
     double Area();
 };
 
-class Cylinder {
+class Cylinder{
 public:
     double diameter, height;
     Cylinder(double diameter=0, double height=0);
     double Area();
     double Volume();
+};
+
+class Circle{
+public:
+    double diameter;
+    Circle(double diameter=0);
+    double Area();
+    double Perimeter();
+    double SliceArea(double angle);
+    double SlicePerimeter(double angle);
+    double ArcLength(double angle);
 };
 
 #endif // GEOMETRY_H_INCLUDED
