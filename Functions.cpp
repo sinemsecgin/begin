@@ -27,6 +27,13 @@ double Logarithm::Value(double variable){
     return (coefficient * log(pow(variable, power)) / log(base));
 }
 
+Var* Logarithm::Derivative(){
+    return new Logarithm();     //TO-DO: ADD THESE LATER!
+}
+
+Var* Logarithm::Integral(){
+    return new Logarithm();     //TO-DO: ADD THESE LATER!
+}
 
 Exponential::Exponential(double coefficient, double base, std::string letter):
                             coefficient(coefficient), base(base), Var(letter){}
@@ -35,6 +42,13 @@ double Exponential::Value(double variable){
     return (coefficient * pow(base, variable));
 }
 
+Var* Exponential::Derivative(){
+    return new Exponential();       //TO-DO: ADD THESE LATER!
+}
+
+Var* Exponential::Integral(){
+    return new Exponential();       //TO-DO: ADD THESE LATER!
+}
 
 Variable::Variable(double coefficient, std::string letter, double power):
                     power(power), coefficient(coefficient), Var(letter){}
@@ -43,6 +57,18 @@ double Variable::Value(double variable){
     return (coefficient * pow(variable, power));
 }
 
+
+Var* Variable::Derivative(){
+    return new Variable(coefficient * power,
+                    letter,
+                    power - 1);
+}
+
+Var* Variable::Integral(){
+    return new Variable((coefficient / (power + 1)),
+                    letter,
+                    power + 1);
+}
 
 Function::Function(Var* variables[], unsigned int arraySize): variables(variables), arraySize(arraySize){}
 
@@ -58,4 +84,13 @@ double Function::Value(LVal values[], unsigned int valueSize){
         }
     }
     return value;
+}
+
+Function Function::Derivative(){
+    unsigned int i;
+    Var* derivative[arraySize];
+    for (i=0; i<arraySize; i++){
+        derivative[i] = variables[i]->Derivative();
+    }
+    return Function(derivative, arraySize);
 }

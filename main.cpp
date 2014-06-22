@@ -33,6 +33,8 @@ int main()
 
     cout << "4x^2 at x = 3: " << testVar->Value(3) << endl
          << "4x^2 at x = 5: " << testVar->Value(5) << endl
+         << "Derivative of 4x^2 at x=3: " << testVar->Derivative()->Value(3) << endl
+         << "Integral of 4x^2 at x=3: " << testVar->Integral()->Value(3) << endl
          << "-2.3y^(-0.5) at y = 3.5: " << doubleVar->Value(3.5) << endl
          << "log9(x) at x = 3: " << logTest->Value(3) << endl
          << "3log5.5(x^2) at x= 4.6: " << logDouble->Value(4.6) << endl
