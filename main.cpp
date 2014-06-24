@@ -29,7 +29,7 @@ int main()
     Var* doubleVar = new Variable(-2.3, "y", -0.5); //(-2.3)x^(-0.5)
     Var* logTest = new Logarithm(9, "x");
     Var* logDouble = new Logarithm(5.5, "x", 2, 3);
-    Var* expTest = new Exponential(3.5, 2, "x");
+    Var* expTest = new Exponential(3.5, 2, 1, "x");
 
     cout << "4x^2 at x = 3: " << testVar->Value(3) << endl
          << "4x^2 at x = 5: " << testVar->Value(5) << endl
